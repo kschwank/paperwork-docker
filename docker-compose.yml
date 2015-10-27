@@ -1,0 +1,10 @@
+paperwork:
+  image: paperwork
+  privileged: true
+  environment:
+    - DISPLAY=:0
+    - HOME=/home/paperworker
+  volumes:
+    - /tmp/.X11-unix:/tmp/.X11-unix
+    - /dev/bus/usb:/dev/bus/usb
+  
