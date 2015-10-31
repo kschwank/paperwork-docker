@@ -6,5 +6,5 @@ paperwork:
     - HOME=/home/paperworker
   volumes:
     - /tmp/.X11-unix:/tmp/.X11-unix
-    - /dev/bus/usb:/dev/bus/usb
-  
+    - /home/karsten/Documents/pwdocker:/home/paperworker
+
