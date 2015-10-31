@@ -24,8 +24,6 @@ RUN pip install numpy scikit-learn
 
 RUN pip install scipy
 
-RUN pip install six
-
 RUN pip install paperwork
 
 # grab gosu for easy step-down from root
@@ -35,8 +33,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates
         && wget -O /usr/local/bin/gosu.asc "https://github.com/tianon/gosu/releases/download/1.2/gosu-$(dpkg --print-architecture).asc" \
         && gpg --verify /usr/local/bin/gosu.asc \
         && rm /usr/local/bin/gosu.asc \
-        && chmod +x /usr/local/bin/gosu \
-        && apt-get purge -y --auto-remove ca-certificates wget
+        && chmod +x /usr/local/bin/gosu
 
 RUN adduser --home /home/paperworker --disabled-password --gecos "" --uid 1000 paperworker
 
