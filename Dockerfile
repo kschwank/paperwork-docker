@@ -2,7 +2,11 @@ FROM ubuntu:latest
 
 RUN apt-get update -y && apt-get upgrade -y
 
-RUN apt-get install -y usbutils sane tesseract-ocr tesseract-ocr-deu
+RUN apt-get install -y software-properties-common
+
+RUN add-apt-repository -y ppa:rolfbensch/sane-git
+
+RUN apt-get update -y && apt-get install -y usbutils sane sane-utils tesseract-ocr tesseract-ocr-deu
 
 # grab gosu for easy step-down from root
 RUN gpg --keyserver pool.sks-keyservers.net --recv-keys B42F6819007F00F88E364FD4036A9C25BF357DD4
