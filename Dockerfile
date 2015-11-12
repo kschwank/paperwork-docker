@@ -36,6 +36,8 @@ RUN apt-get install -y libcairo2-dev libglade2-dev libgtk-3-dev libpoppler-dev
 
 RUN apt-get install -y gir1.2-gladeui-2.0 gir1.2-poppler-0.18 python-gi-cairo
 
+RUN apt-get install -y humanity-icon-theme
+
 RUN pip install numpy scipy
 
 RUN pip install scikit-learn
