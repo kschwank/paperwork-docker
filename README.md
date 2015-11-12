@@ -7,7 +7,7 @@ If you are using a different distribution on your host system or have several us
 not match. In that case you have to adjust the uid in the Dockerfile's "adduser"-line.
 
 
-Build with 
+Build with
 
 docker build -t paperwork .
 
