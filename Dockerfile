@@ -50,7 +50,7 @@ RUN git clone https://github.com/jflesch/paperwork.git
 
 WORKDIR /paperwork
 
-RUN git checkout stable
+RUN git checkout unstable
 
 RUN ./setup.py build
 
