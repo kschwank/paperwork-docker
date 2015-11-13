@@ -44,7 +44,19 @@ RUN pip install numpy scipy
 
 RUN pip install scikit-learn
 
-RUN pip install paperwork
+RUN apt-get install -y git
+
+RUN git clone https://github.com/jflesch/paperwork.git
+
+WORKDIR /paperwork
+
+RUN git checkout stable
+
+RUN ./setup.py build
+
+RUN ./setup.py install
+
+WORKDIR /
 
 RUN adduser --home /home/paperworker --disabled-password --gecos "" --uid 1000 paperworker
 
