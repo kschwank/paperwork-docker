@@ -1,5 +1,5 @@
 paperwork:
-  image: kschwank/paperwork-docker
+  image: kschwank/paperwork-docker:stable
   privileged: true
   environment:
     - DISPLAY=:0
