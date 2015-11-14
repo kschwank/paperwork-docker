@@ -9,17 +9,14 @@ not match. In that case you have to adjust the uid in the Dockerfile's "adduser"
 
 Build with
 
-docker build -t paperwork .
+docker build -t kschwank/paperwork-docker:stable .
 
 then run with
 
-docker run -ti --rm  -e DISPLAY=$DISPLAY -e HOME=/home/paperworker --privileged=true -v /dev/bus/usb:/dev/bus/usb -v /tmp/.X11-unix:/tmp/.X11-unix paperwork /bin/bash
+docker run -ti --rm -e DISPLAY=$DISPLAY -e HOME=/home/paperworker --privileged=true -v /dev/bus/usb:/dev/bus/usb -v /tmp/.X11-unix:/tmp/.X11-unix kschwank/paperwork-docker:stable
 
 with docker-compose you can also use the docker-compose.yml file to easily start the container with
 
 docker-compose up
 
 
-
-Issues:
-Documents are not displayed, yet
