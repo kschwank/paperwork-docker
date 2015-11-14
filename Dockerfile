@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM ubuntu:15.10
 
 RUN apt-get update -y && apt-get upgrade -y
 
@@ -32,7 +32,7 @@ RUN apt-get install -y libenchant-dev
 
 RUN apt-get install -y libcanberra-gtk-module
 
-RUN apt-get install -y libcairo2-dev libglade2-dev libgtk-3-dev libpoppler-dev
+RUN apt-get install -y libgl1-mesa-glx libcairo2-dev libglade2-dev libgtk-3-dev libpoppler-dev
 
 RUN apt-get install -y gir1.2-gladeui-2.0 gir1.2-poppler-0.18 python-gi-cairo
 
