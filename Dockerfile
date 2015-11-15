@@ -36,9 +36,7 @@ RUN apt-get install -y libcairo2-dev libglade2-dev libgtk-3-dev libpoppler-dev
 
 RUN apt-get install -y gir1.2-gladeui-2.0 gir1.2-poppler-0.18 python-gi-cairo
 
-RUN apt-get install -y libglib2.0-bin gnome-icon-theme
-
-RUN gsettings set org.gnome.desktop.interface icon-theme 'Gnome'
+RUN apt-get install -y dbus-x11 libglib2.0-bin gnome-icon-theme-full
 
 RUN pip install numpy scipy
 
