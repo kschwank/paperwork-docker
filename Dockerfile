@@ -40,7 +40,7 @@ RUN apt-get install -y dbus-x11 libglib2.0-bin gnome-icon-theme-full
 
 RUN pip install numpy scipy
 
-RUN pip install scikit-learn
+RUN pip install scikit-learn scikit-image
 
 RUN apt-get install -y git
 
